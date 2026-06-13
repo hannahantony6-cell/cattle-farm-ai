@@ -3,6 +3,10 @@
 An intelligent multi-agent AI system that helps cattle farmers 
 monitor cow health, track milk production, optimize feed and 
 calculate profits automatically.
+When a critical condition is detected, the system automatically 
+alerts the farmer via Telegram using n8n automation — reducing 
+emergency response time from hours to seconds.
+
 
 ## Live Demo
 👉 https://cattle-farm-ai-blukzqtmfxe8swegfzxmzb.streamlit.app
@@ -16,6 +20,7 @@ calculate profits automatically.
 - Vaccination Reminder tracks and alerts upcoming vaccines
 - Milk Production Chart visualizes 7-day trends
 - Profit Calculator shows income vs expense per cow
+- Automatically send alert to the farmer via telegram using n8n Integration
 
 ## Demo Screenshots
 
