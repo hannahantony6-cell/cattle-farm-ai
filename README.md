@@ -36,6 +36,9 @@ calculate profits automatically.
 ### Profit Calculator
 <img width="1896" height="636" alt="image" src="https://github.com/user-attachments/assets/9227b607-4369-4773-a9ef-0884aa0a341d" />
 <img width="1882" height="838" alt="image" src="https://github.com/user-attachments/assets/5fcf0c0e-3aac-4637-9d67-49a1ec632b00" />
+###  Telegram Alert
+<img width="317" height="682" alt="image" src="https://github.com/user-attachments/assets/d8acb1e3-c0b8-4ec1-95f5-ecf647b9454c" />
+
 
 
 ##  Multi-Agent Architecture
@@ -62,6 +65,12 @@ Calculates optimal nutrition
 ↓
 
 Results displayed on dashboard
+        ↓
+If CRITICAL detected
+        ↓
+n8n webhook triggered
+        ↓
+Telegram alert sent to farmer
 
 ##  Tech Stack
 
@@ -73,6 +82,8 @@ Results displayed on dashboard
 | Groq API | AI inference engine |
 | LLaMA 3.3 70B | Large language model |
 | Plotly | Data visualization |
+| n8n | Workflow automation |
+| Telegram Bot API | Farmer alerts |
 
 ##  Key Features
 
@@ -111,6 +122,12 @@ Results displayed on dashboard
 - Income vs Expense vs Profit bar chart
 - Alerts if cow is unprofitable
 
+###  Automatic Telegram Alerts (n8n Integration)
+- When AI detects CRITICAL or SICK cow
+- Automatically sends Telegram message to farmer
+- Alert includes cow ID, disease, immediate action
+- Powered by n8n automation workflow
+- Zero human intervention required
 ##  How to run locally
 
 **Step 1 — Clone the repo**
