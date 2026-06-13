@@ -148,6 +148,7 @@ streamlit run app.py
 
 Get your free API key at: https://console.groq.com
 Enter it in the sidebar when the app opens!
+N8N_WEBHOOK_URL - Your n8n webhook URL
 
 ## Sample Test Case
 
