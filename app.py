@@ -119,7 +119,25 @@ if st.button("🤖 Analyze Cow with AI Agents", use_container_width=True, type="
                 <p style='color: #e0e0e0; font-size: 13px;'>{health_result['analysis']}</p>
             </div>
             """, unsafe_allow_html=True)
-
+            # Send Telegram alert if CRITICAL or SICK
+            if "CRITICAL" in health_result['analysis'] or "SICK" in health_result['analysis']:
+                try:
+                    import requests
+                    from datetime import datetime
+                    alert_data = {
+                        "cow_id": cow_data['cow_id'],
+                        "health_status": "CRITICAL",
+                        "disease": health_result['analysis'][:100],
+                        "action": "Immediate veterinary attention required",
+                        "vet_required": "YES",
+                        "farm_name": "My Cattle Farm",
+                        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    }
+                    n8n_url = st.secrets.get("N8N_WEBHOOK_URL", "")
+                    requests.post(n8n_url, json=alert_data)
+                    st.warning("🚨 CRITICAL ALERT SENT TO FARMER VIA TELEGRAM!")
+                except:
+                    pass
         with col2:
             with st.spinner("🥛 Milk Agent analyzing..."):
                 milk_result = analyze_milk_production(cow_data, api_key)
@@ -345,3 +363,4 @@ if st.button("💰 Calculate Profit", use_container_width=True):
     )
     
     st.plotly_chart(fig2, use_container_width=True)
+    
