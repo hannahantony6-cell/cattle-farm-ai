@@ -36,7 +36,10 @@ calculate profits automatically.
 ### Profit Calculator
 <img width="1896" height="636" alt="image" src="https://github.com/user-attachments/assets/9227b607-4369-4773-a9ef-0884aa0a341d" />
 <img width="1882" height="838" alt="image" src="https://github.com/user-attachments/assets/5fcf0c0e-3aac-4637-9d67-49a1ec632b00" />
+
+
 ###  Telegram Alert
+
 <img width="317" height="682" alt="image" src="https://github.com/user-attachments/assets/d8acb1e3-c0b8-4ec1-95f5-ecf647b9454c" />
 
 
